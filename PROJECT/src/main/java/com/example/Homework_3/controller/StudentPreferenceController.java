@@ -32,7 +32,7 @@ public class StudentPreferenceController {
 
         StudentPreference pref = optionalPref.get();
 
-        String eTag = "\"" + (pref.getId() + "-" + pref.getRank()) + "\"";
+        String eTag = (pref.getId() + "-" + pref.getRank());
 
         if (ifNoneMatch != null && ifNoneMatch.equals(eTag)) {
             return ResponseEntity.status(HttpStatus.NOT_MODIFIED).eTag(eTag).build();

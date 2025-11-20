@@ -21,9 +21,14 @@ public class Student extends Person {
     @Column(name = "academic_year", nullable = false)
     private Integer academicYear;
 
-    public Student(String code, String name, String email, Integer academicYear) {
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "user_id", referencedColumnName = "id")
+    private UserEntity user;
+
+    public Student(String code, String name, String email, Integer academicYear, UserEntity user) {
         super(name, email);
         this.code = code;
         this.academicYear = academicYear;
+        this.user = user;
     }
 }
