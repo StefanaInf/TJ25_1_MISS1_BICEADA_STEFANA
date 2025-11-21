@@ -59,10 +59,10 @@ public class SecurityConfig {
     @Bean
     public UserDetailsService userDetailsService(UserRepository userRepository) {
         return email -> userRepository.findByEmail(email)
-                .map(appUser -> org.springframework.security.core.userdetails.User
-                        .withUsername(appUser.getEmail())
-                        .password(appUser.getPassword())
-                        .authorities(appUser.getAuthorities())
+                .map(userEntity -> org.springframework.security.core.userdetails.User
+                        .withUsername(userEntity.getEmail())
+                        .password(userEntity.getPassword())
+                        .authorities(userEntity.getAuthorities())
                         .build())
                 .orElseThrow(() -> new UsernameNotFoundException("User not found: " + email));
     }

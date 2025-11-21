@@ -32,7 +32,7 @@ public class Lab4Application {
 
             UserEntity admin = new UserEntity();
             admin.setEmail(adminEmail);
-            admin.setPassword(passwordEncoder.encode("admin123")); // change later!
+            admin.setPassword(passwordEncoder.encode("admin123"));
             admin.setRole(Role.ADMIN);
 
             userRepository.save(admin);
