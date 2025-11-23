@@ -20,3 +20,14 @@ In folder named PROJECT
 
 - Secure Actuator endpoints: expose only health and info publicly; require auth for metrics.
 -> **exposed "/actuator/health",  "/actuator/info" with permitAll and ("/actuator/") required admin role**
+
+
+### Compulsory 7
+Mistakenly named Compulsory 6, im sorry.
+
+Cannot get Kafka to connect on my machine, tested connection both ways 
+- host -> docker (succeceds)
+- docker -> host (succeceds)
+- service to docker (fails), connections times out and the request has a size of >1Gb?? The topic has been created through which is weird, seems like a configuration problem
+
+uploaded my attempt :(
