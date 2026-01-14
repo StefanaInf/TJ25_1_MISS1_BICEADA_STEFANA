@@ -1,0 +1,3 @@
+service:
+  name: Service-B-DEV
+  apiKey: "dev-key-123"

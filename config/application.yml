@@ -1,0 +1,3 @@
+shared:
+  greeting: "This is the default config"
+  featureFlag: false

@@ -1,0 +1,3 @@
+shared:
+  greeting: "This si dev from shared config"
+  featureFlag: true

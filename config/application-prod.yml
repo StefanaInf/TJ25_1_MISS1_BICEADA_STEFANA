@@ -1,0 +1,3 @@
+shared:
+  greeting: "This is Prod shared config"
+  featureFlag: false
